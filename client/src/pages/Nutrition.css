@@ -1,0 +1,103 @@
+.nutrition-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1d4ed8);
+  padding: 60px 20px;
+}
+
+.nutrition-overlay {
+  max-width: 900px;
+  margin: auto;
+}
+
+.nutrition-container {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 24px;
+  padding: 35px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.nutrition-container h1 {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.welcome-text {
+  text-align: center;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 30px;
+}
+
+.nutrition-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.nutrition-form input,
+.nutrition-form select {
+  width: 100%;
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 1px solid #cbd5e1;
+  font-size: 16px;
+  background: white;
+  outline: none;
+}
+
+.nutrition-form input:focus,
+.nutrition-form select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.18);
+}
+
+.nutrition-form input[readonly] {
+  background: #eef4ff;
+  font-weight: 800;
+  color: #2563eb;
+}
+
+.nutrition-form button {
+  grid-column: span 2;
+  width: 260px;
+  margin: 10px auto 0;
+  padding: 15px;
+  border: none;
+  border-radius: 16px;
+  background: #2563eb;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+}
+
+.nutrition-form button:hover {
+  transform: translateY(-2px);
+  background: #1d4ed8;
+}
+
+.nutrition-form .delete-btn {
+  background: #ef4444;
+  box-shadow: 0 10px 25px rgba(239, 68, 68, 0.3);
+}
+
+.nutrition-form .delete-btn:hover {
+  background: #dc2626;
+}
+
+@media (max-width: 700px) {
+  .nutrition-form {
+    grid-template-columns: 1fr;
+  }
+
+  .nutrition-form button {
+    grid-column: span 1;
+    width: 100%;
+  }
+
+  .nutrition-container {
+    padding: 25px;
+  }
+}

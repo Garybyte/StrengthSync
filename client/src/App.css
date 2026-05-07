@@ -1,0 +1,789 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  background:
+    linear-gradient(rgba(10, 15, 30, 0.84), rgba(10, 15, 30, 0.84)),
+    url("./assets/login-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+nav {
+  background: rgba(0, 102, 255, 0.9);
+  backdrop-filter: blur(12px);
+  padding: 18px 13%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+nav a {
+  color: white;
+  margin-left: 24px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+button {
+  padding: 14px;
+  background: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #004ecc;
+  transform: translateY(-2px);
+}
+
+form {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 15px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+input:focus {
+  border-color: #7c7cff;
+  box-shadow: 0 0 0 3px rgba(124, 124, 255, 0.25);
+}
+
+/* HOME PAGE */
+
+.homePage {
+  background: #0b1020;
+  min-height: 100vh;
+}
+
+.hero {
+  min-height: 92vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.48)),
+    url("./assets/dashboard-bg.jpg"),
+    linear-gradient(135deg, #0057ff 0%, #267dff 45%, #7c7cff 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 60px;
+  padding: 80px 13%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  top: -300px;
+  right: -250px;
+}
+
+.heroText {
+  position: relative;
+  z-index: 2;
+}
+
+.tag {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  opacity: 0.9;
+}
+
+.heroText h1 {
+  font-size: 82px;
+  line-height: 0.95;
+  margin: 18px 0;
+  font-weight: 800;
+}
+
+.heroText span {
+  background: white;
+  color: #0057ff;
+  padding: 0 18px;
+  border-radius: 16px;
+  display: inline-block;
+}
+
+.heroText p,
+.heroDescription {
+  font-size: 22px;
+  line-height: 1.6;
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.heroButtons {
+  display: flex;
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.heroBtn {
+  display: inline-block;
+  padding: 16px 34px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.heroBtn:hover {
+  transform: translateY(-4px) scale(1.03);
+}
+
+.primaryBtn,
+.heroBtn {
+  background: white;
+  color: #0057ff;
+}
+
+.secondaryBtn {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.heroStats {
+  display: flex;
+  gap: 40px;
+  margin-top: 55px;
+}
+
+.heroStats h3 {
+  margin: 0;
+  font-size: 34px;
+}
+
+.heroStats p {
+  margin-top: 6px;
+  opacity: 0.85;
+}
+
+.heroVisual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.glowCircle {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: rgba(255, 255, 255, 0.15);
+  filter: blur(60px);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.phoneMockup {
+  width: 360px;
+  min-height: 620px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  border: 10px solid #111827;
+  border-radius: 42px;
+  padding: 28px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.35);
+  color: #111;
+}
+
+.phoneTop {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.phoneHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #111;
+  margin-bottom: 25px;
+}
+
+.phoneHeader h2 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.phoneHeader span {
+  background: #22c55e;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.statCard {
+  background: white;
+  color: #111;
+  padding: 22px;
+  margin-bottom: 18px;
+  border-radius: 22px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.statCard h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.statCard p {
+  margin: 8px 0 18px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.progressBar {
+  width: 100%;
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progressBar div {
+  height: 100%;
+  background: linear-gradient(90deg, #0057ff, #7c7cff);
+  border-radius: 999px;
+}
+
+.miniCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.miniCard {
+  background: linear-gradient(135deg, #0057ff, #7c7cff);
+  color: white;
+  border-radius: 22px;
+  padding: 20px;
+}
+
+.miniCard h5 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.miniCard p {
+  margin: 10px 0 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.featuresSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  padding: 80px 13%;
+  background:
+    linear-gradient(rgba(244, 247, 255, 0.92), rgba(244, 247, 255, 0.92)),
+    url("assets/login-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.featureCard {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 32px;
+  border-radius: 28px;
+  color: #111;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+}
+
+.featureCard h3 {
+  margin-top: 0;
+  font-size: 26px;
+}
+
+.featureCard p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* AUTH PAGES */
+
+.authPage {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background:
+    linear-gradient(rgba(0, 20, 60, 0.68), rgba(0, 20, 60, 0.68)),
+    url("./assets/gym-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.authCard {
+  width: 420px;
+  background: rgba(255, 255, 255, 0.14);
+  color: white;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(18px);
+}
+
+.authCard h1 {
+  margin-top: 0;
+  font-size: 36px;
+}
+
+.authCard p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.authLink a {
+  color: white;
+  font-weight: bold;
+}
+
+
+
+.container {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: white;
+  border-radius: 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.subtext {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.dashboardHero {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 35px;
+  border-radius: 28px;
+  background:
+    linear-gradient(rgba(0, 87, 255, 0.78), rgba(127, 92, 255, 0.78)),
+    url("./assets/dashboard-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  box-shadow: 0 20px 45px rgba(0, 102, 255, 0.35);
+  overflow: hidden;
+  position: relative;
+}
+
+.dashboardHero::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  top: -220px;
+  right: -180px;
+}
+
+.dashboardHero h1 {
+  font-size: 58px;
+  line-height: 1.05;
+  margin: 10px 0;
+}
+
+.dashboardHero h1 span {
+  background: white;
+  color: #0057ff;
+  padding: 0 14px;
+  border-radius: 10px;
+}
+
+.dashboardTag {
+  font-weight: bold;
+  letter-spacing: 2px;
+  opacity: 0.9;
+}
+
+.personalizedHero {
+  grid-template-columns: 1.2fr 0.8fr;
+}
+
+.goalPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.goalPills span {
+  background: white;
+  color: #0057ff;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.profileCard {
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(14px);
+  border-radius: 26px;
+  padding: 28px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.avatarCircle {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: white;
+  color: #0057ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.profileCard h3 {
+  font-size: 28px;
+  margin: 10px 0 5px;
+}
+
+.profileCard p {
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.profileCard button {
+  background: white;
+  color: #0057ff;
+  border-radius: 999px;
+}
+
+.profileCard button:hover {
+  background: #eef4ff;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+  margin: 25px 0;
+}
+
+.statBox {
+  background: linear-gradient(135deg, #0066ff, #4f8dff);
+  color: white;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 102, 255, 0.25);
+  transition: 0.3s;
+}
+
+.statBox:hover {
+  transform: translateY(-5px);
+}
+
+.statBox h2 {
+  font-size: 38px;
+  margin: 0;
+}
+
+.statBox p {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+/* CLEAN WORKOUT FORM STYLE */
+
+.suggestions {
+  gap: 14px;
+}
+
+.suggestions button {
+  min-width: 120px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #0f172a;
+  border: 1px solid rgba(0, 102, 255, 0.25);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.suggestions button:hover {
+  background: white;
+  color: #0066ff;
+  border-color: #0066ff;
+}
+
+form {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 28px;
+  border-radius: 22px;
+  margin-top: 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+form input,
+form select {
+  background: white;
+  color: #111827;
+  border: 1px solid #d7dce5;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+form input::placeholder {
+  color: #6b7280;
+}
+
+form button {
+  max-width: 260px;
+  margin: 10px auto 0;
+  padding: 16px 34px;
+  border-radius: 14px;
+  background: #0066ff;
+  box-shadow: 0 10px 25px rgba(0, 102, 255, 0.3);
+}
+
+form button:hover {
+  background: #004ecc;
+}
+
+.suggestions span {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  padding: 22px;
+  border-radius: 20px;
+  border-left: 6px solid #4f8dff;
+  color: white;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+
+.goalList {
+  display: grid;
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.goal {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.goal:hover {
+  border-color: #7c7cff;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.activeGoal {
+  background: #0066ff;
+  color: white;
+  border-color: #0066ff;
+}
+
+.backBtn {
+  margin-top: 12px;
+  background: #6b7280;
+}
+
+
+@media (max-width: 950px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 70px 8%;
+  }
+
+  .heroText h1 {
+    font-size: 58px;
+  }
+
+  .heroText p,
+  .heroDescription {
+    margin: auto;
+  }
+
+  .heroButtons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .heroStats {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .phoneMockup {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .featuresSection {
+    padding: 60px 8%;
+  }
+
+  .dashboardHero,
+  .personalizedHero {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboardHero h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 800px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav a {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .heroText h1 {
+    font-size: 46px;
+  }
+
+  .container {
+    margin: 30px 15px;
+    padding: 24px;
+  }
+
+  .authCard {
+    width: 100%;
+  }
+}
+select {
+  padding: 15px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+}.chartBox {
+  display: grid;
+  gap: 16px;
+  margin: 25px 0 35px;
+  padding: 24px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.chartRow {
+  display: grid;
+  grid-template-columns: 120px 1fr 80px;
+  gap: 14px;
+  align-items: center;
+}
+
+.chartBar {
+  height: 18px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.chartBar div {
+  height: 100%;
+  background: linear-gradient(90deg, #0066ff, #7c7cff);
+  border-radius: 999px;
+}
+
+@media (max-width: 700px) {
+  .chartRow {
+    grid-template-columns: 1fr;
+  }
+}
